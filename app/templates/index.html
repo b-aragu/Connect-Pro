@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Home - ConnectPro{% endblock %}
+
+{% block content %}
+<section id="hero">
+    <h2>Welcome to ConnectPro</h2>
+    <p>Connecting professionals from various industries.</p>
+    <a href="{{ url_for('register') }}" class="btn">Join Now</a>
+</section>
+<section id="features">
+    <h3>Features</h3>
+    <ul>
+        <li>Networking</li>
+        <li>Job Listings</li>
+        <li>Messaging</li>
+        <li>Feedback</li>
+        <li>Analytics</li>
+    </ul>
+</section>
+{% endblock %}
+
