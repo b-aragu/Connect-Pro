@@ -8,18 +8,27 @@
 </head>
 <body>
     <header>
-        <h1>ConnectPro</h1>
-        <nav>
-            <ul>
-                <li><a href="{{ url_for('index') }}">Home</a></li>
-                <li><a href="{{ url_for('login') }}">Login</a></li>
-                <li><a href="{{ url_for('register') }}">Register</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>ConnectPro</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('features') }}">Features</a></li>
+                    <li><a href="{{ url_for('about') }}">About Us</a></li>
+                    <li><a href="{{ url_for('login') }}">Login</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         {% block content %}{% endblock %}
     </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ConnectPro. All rights reserved.</p>
+        </div>
+    </footer>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
