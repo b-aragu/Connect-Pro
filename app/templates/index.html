@@ -4,11 +4,12 @@
 
 {% block content %}
 <section id="hero">
-    <div class="container">
+    <div class="container hero-content">
         <div class="intro">
-            <h2>Welcome to ConnectPro: Your Professional Networking Platform</h2>
+            <h2>Welcome to <br> ConnectPro: Your <br> Professional <br> Networking <br> Platform</h2>
             <p>ConnectPro is your one-stop platform for professional networking, job listings, messaging, feedback, and analytics. Navigate through our sections to explore more.</p>
             <a href="{{ url_for('register') }}" class="btn">Explore ConnectPro</a>
+            <p class="subtext">Join us and start connecting with professionals across industries.</p>
         </div>
         <div class="cover-image">
             <video src="https://cdn.dribbble.com/userupload/13995693/file/original-d66936075e187ed4bc22b54be7b74c94.mp4" autoplay muted loop></video>
@@ -16,4 +17,3 @@
     </div>
 </section>
 {% endblock %}
-
