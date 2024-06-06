@@ -366,3 +366,113 @@ p {
     height: auto; /* Maintain the aspect ratio */
     border-radius: 10px;
 }
+
+/* Media Queries for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    /* Adjust hero section styles for smaller screens */
+    header nav ul {
+        display: none;
+    }
+
+    /* Show the ul when the menu icon is clicked */
+    header nav .menu-icon:checked + ul {
+        display: flex;
+        flex-direction: column;
+        background-color: #333; /* Background color for dropdown */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    header nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    header nav ul li a {
+        display: block;
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    header nav ul li a:hover {
+        background-color: #555; /* Hover background color */
+    }
+
+    /* Style the menu icon */
+    .menu-icon {
+        display: none;
+    }
+
+    .menu-icon:checked + label {
+        background-color: #333; /* Background color for menu icon on click */
+    }
+
+    .menu-icon:checked + label::before {
+        content: '\f00d'; /* Unicode for close icon (e.g., X) */
+    }
+
+    .menu-icon:checked + label + ul {
+        display: flex;
+        flex-direction: column;
+        background-color: #333; /* Background color for dropdown */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    /* Style the label for the menu icon */
+    .menu-icon + label {
+        display: block;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        padding: 10px;
+        color: #fff;
+        font-size: 20px;
+        z-index: 1100;
+        background-color: transparent;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .menu-icon + label::before {
+        content: '\f0c9'; /* Unicode for hamburger icon (e.g., three lines) */
+        font-family: 'Font Awesome'; /* Assuming you are using Font Awesome for icons */
+    }
+}
+    #hero .intro {
+        max-width: 100%; /* Adjust width to fit smaller screens */
+        margin-right: 0; /* Remove margin-right to prevent overlapping */
+    }
+
+    #hero h2 {
+        font-size: 1.8em; /* Decrease font size for smaller screens */
+    }
+
+    /* Meet Our Team section styles */
+    .team-member {
+        max-width: 100%; /* Adjust width for smaller screens */
+    }
+
+    .member-info img {
+        width: 100px; /* Reduce image size for smaller screens */
+    }
+
+    .member-info h3 {
+        font-size: 1.4em; /* Decrease font size for smaller screens */
+    }
+
+    .member-info p {
+        font-size: 1em; /* Decrease font size for smaller screens */
+    }
+}
